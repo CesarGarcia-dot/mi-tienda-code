@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Cliente } from '../cliente';
 
 @Component({
   selector: 'app-cliente-detalle',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteDetalleComponent implements OnInit {
 
-  constructor() { }
+  cliente: Cliente;
+
+  constructor(
+    private route: ActivatedRoute,
+  ) {
+    this.route.data.subscribe(data => {
+      this.cliente = data['cliente'];
+    });
+  }
 
   ngOnInit(): void {
   }

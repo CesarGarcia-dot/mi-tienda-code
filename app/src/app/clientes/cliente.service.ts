@@ -18,7 +18,7 @@ export class ClienteService {
   constructor(private http: HttpClient) { }
 
 
-  getCustomer(id: number) {
+  getCustomer(id: number): Observable<Cliente> {
     return this.http.get<Cliente>(this.apiUrl + '/' + id);
   }
 
@@ -26,10 +26,9 @@ export class ClienteService {
     return this.http.get<Cliente[]>(this.apiUrl);
   }
 
-  addCustomer(cliente: Cliente) {
-    return this.clientes.push(cliente);
+  addCliente(cliente: Cliente) {
+    return this.http.post(this.apiUrl, cliente);
   }
-
 
 }
 

@@ -1,1 +1,69 @@
-<p>cliente-registro works!</p>
+<div class="pt-4">
+</div>
+<div class="row">
+  <div class="col col-5">
+    <button routerLink="../" type="button" class="btn btn-light"><i class="bi bi-arrow-left"></i> Regresar a
+      lista</button>
+  </div>
+</div>
+<div class="pt-3">
+
+</div>
+<form class="row g-3" [formGroup]="registerForm" (ngSubmit)="register()">
+  <div class="col-md-6 col-sm-12">
+    <label for="nombres" class="form-label">Nombres</label>
+    <input type="text" name="nombre" formControlName="nombre" class="form-control" id="nombres"
+      placeholder="Ejem. Pepe">
+    <span class="text-danger"
+      *ngIf="registerForm.get('nombre')?.touched && registerForm.get('nombre')?.errors?.required">
+      *Nombre obligatorio
+    </span>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <label for="apellidos" class="form-label">Apellidos</label>
+    <input type="text" name="apellido" formControlName="apellido" class="form-control" id="apellidos"
+      placeholder="Ejem. Lopez Lopez">
+    <span class="text-danger"
+      *ngIf="registerForm.get('apellido')?.touched && registerForm.get('apellido')?.errors?.required">
+      *Apellido obligatorio
+    </span>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <label for="telefono" class="form-label">Telefono</label>
+    <input type="number" class="form-control" name="telefono" formControlName="telefono" id="telefono"
+      placeholder="Ejem. 2222-2222">
+    <span class="text-danger"
+      *ngIf="registerForm.get('telefono')?.touched && registerForm.get('telefono')?.errors?.required">
+      *Telefono obligatorio sin guiones
+    </span>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <label for="correo" class="form-label">Correo</label>
+    <input type="email" class="form-control" name="correo" formControlName="correo" id="correo" placeholder="Ejem. myprofile@email.com">
+    <span class="text-danger"
+      *ngIf="registerForm.get('correo')?.touched && registerForm.get('correo')?.errors?.required">
+      *Correo obligatorio
+    </span>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <label for="nit" class="form-label">NIT</label>
+    <input type="number" class="form-control" name="nit" formControlName="nit" id="nit" placeholder="Ejem. 0000-000-0000-000">
+    <span class="text-danger"
+    *ngIf="registerForm.get('nit')?.touched && registerForm.get('nit')?.errors?.required">
+    *Nit obligatorio sin guiones
+  </span>
+  </div>
+  <div class="col-12 col-sm-12">
+    <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Registrar cliente</button>
+  </div>
+</form>
+
+
+<div class="pt-5 mt-5">
+  <div>
+    <span>Informacion sobre el formulario (background):</span>
+  </div>
+  <div>
+    {{registerForm.value | json}}
+  </div>
+</div>

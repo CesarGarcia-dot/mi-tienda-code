@@ -1,1 +1,27 @@
-<p>cliente-detalle works!</p>
+<div class="pt-4">
+</div>
+<div class="row">
+  <div class="col col-5">
+    <button routerLink="/clientes" type="button" class="btn btn-light"><i class="bi bi-arrow-left"></i> Regresar a
+      lista</button>
+  </div>
+</div>
+<div class="pt-3">
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Informacion del cliente</h5>
+        <ul>
+          <li>Nombres: {{cliente.nombre}}</li>
+          <li>Apellidos: {{cliente.apellido}}</li>
+          <li>Telefono: {{cliente.telefono}}</li>
+          <li>Correo: {{cliente.correo}}</li>
+          <li>NIT: {{cliente.nit}}</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,1 +1,47 @@
-<p>clientes-lista works!</p>
+<h3>Lista de clientes</h3>
+<div class="row">
+  <div class="col col-5">
+    <button type="button" (click)="getClientes()" class="btn btn-light">Listar cliente</button>
+    <button type="button" routerLink="./agregar" class="btn btn-primary ms-5">Agregar cliente</button>
+  </div>
+</div>
+<div class="mb-5">
+
+</div>
+<div class="row">
+  <div class="col col-12">
+    <div *ngIf="loading" class="d-flex align-items-center">
+      <strong>Cargando...</strong>
+      <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+    </div>
+    <div *ngIf="show">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Correo</th>
+            <th scope="col">NIT</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <th scope="row">{{cliente.id}}</th>
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellido}}</td>
+            <td>{{cliente.telefono}}</td>
+            <td>{{cliente.correo}}</td>
+            <td>{{cliente.nit}}</td>
+            <td>
+              <button type="button" [routerLink]="['mostrar', cliente.id]"  class="btn btn-info">Informacion</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

@@ -1,26 +1,53 @@
 {
-    "clientes": [
-        {
-            "id": "1",
-            "nombre": "Debora",
-            "apellidos": "Guardado"
-        }
-    ],
-    "ordenes": [
-        {
-            "idProducto": "1",
-            "idCliente": "1",
-            "idOrden": "1",
-            "cantidad": "1",
-            "fecha": "12-09-2021"
-        }
-    ],
-    "productos": [
-        {
-            "id": "1",
-            "nombre": "Debora",
-            "descripcion": "Guardado",
-            "precio": "10"
-        }
-    ]
+  "clientes": [
+    {
+      "id": "1",
+      "nombre": "Debora",
+      "apellido": "Guardado",
+      "correo": "debora503@gmail.com",
+      "nit": "000-000-0000-111",
+      "telefono": "2222-2222"
+    },
+    {
+      "id": "2",
+      "nombre": "Pepe",
+      "apellido": "Lopez",
+      "correo": "pepe503@gmail.com",
+      "nit": "000-000-0000-111",
+      "telefono": "2222-2222"
+    },
+    {
+      "id": "3",
+      "nombre": "Jose",
+      "apellido": "Guardado",
+      "correo": "db503@gmail.com",
+      "nit": "0000000000111",
+      "telefono": "22222222"
+    },
+    {
+      "id": "4",
+      "nombre": "Juan",
+      "apellido": "Ceviche",
+      "correo": "juan503@gmail.com",
+      "nit": "000000000111",
+      "telefono": "22222222"
+    }
+  ],
+  "ordenes": [
+    {
+      "idProducto": "1",
+      "idCliente": "1",
+      "idOrden": "1",
+      "cantidad": "1",
+      "fecha": "12-09-2021"
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Debora",
+      "descripcion": "Guardado",
+      "precio": "10"
+    }
+  ]
 }
