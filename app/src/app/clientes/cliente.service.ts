@@ -1,13 +1,36 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Cliente } from './cliente';
 
 
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class ClienteService {
 
-  constructor() { }
+  apiUrl = environment.apiUrl + 'clientes';
+  clientes: Cliente[] = [];
 
- 
+  constructor(private http: HttpClient) { }
+
+
+  getCustomer(id: number) {
+    return this.http.get<Cliente>(this.apiUrl + '/' + id);
+  }
+
+  getAllCustomers(): Observable<Cliente[]> {
+    return this.http.get<Cliente[]>(this.apiUrl);
+  }
+
+  addCustomer(cliente: Cliente) {
+    return this.clientes.push(cliente);
+  }
+
+
 }
+
+
