@@ -1,1 +1,26 @@
-<p>producto-detalle works!</p>
+<div class="pt-4">
+</div>
+<div class="row">
+  <div class="col col-5">
+    <button routerLink="/productos" type="button" class="btn btn-light"><i class="bi bi-arrow-left"></i> Regresar a
+      lista</button>
+  </div>
+</div>
+<div class="pt-3">
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Informacion del producto</h5>
+        <ul>
+          <li>Nombre: {{producto.nombre}}</li>
+          <li>Descripcion: {{producto.descripcion}}</li>
+          <li>Precio: {{producto.precio | currency}}</li>
+          <li>Fecha: {{producto.fecha}}</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

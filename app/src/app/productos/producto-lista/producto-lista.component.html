@@ -1,8 +1,8 @@
 <h3>Lista de productos</h3>
 <div class="row">
   <div class="col col-5">
-    <button type="button" class="btn btn-light">Listar productos</button>
-    <button type="button" class="btn btn-primary ms-5">Agregar producto</button>
+    <button type="button" (click)="getProductos()" class="btn btn-light">Listar productos</button>
+    <button type="button" routerLink="./agregar" class="btn btn-primary ms-5">Agregar producto</button>
   </div>
 </div>
 <div class="mb-5">
@@ -10,34 +10,36 @@
 </div>
 <div class="row">
   <div class="col col-12">
-    <table class="table table-responsive">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
+    <div *ngIf="loading" class="d-flex align-items-center">
+      <strong>Cargando...</strong>
+      <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+    </div>
+    <div *ngIf="show">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productos">
+            <th scope="row">{{producto.id}}</th>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.descripcion}}</td>
+            <td>{{producto.precio | currency}}</td>
+            <td>{{producto.fecha}}</td>
+            <td>
+              <button type="button" [routerLink]="['mostrar', producto.id]" class="btn btn-info">Informacion</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+
 </div>

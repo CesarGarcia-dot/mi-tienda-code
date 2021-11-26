@@ -1,1 +1,60 @@
-<p>producto-registro works!</p>
+<div class="pt-4">
+</div>
+<div class="row">
+  <div class="col col-5">
+    <button routerLink="../" type="button" class="btn btn-light"><i class="bi bi-arrow-left"></i> Regresar a
+      lista</button>
+  </div>
+</div>
+<div class="pt-3">
+
+</div>
+<form class="row g-3" [formGroup]="registerForm" (ngSubmit)="register()">
+  <div class="col-md-6 col-sm-12">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" name="nombre" formControlName="nombre" class="form-control" id="nombre"
+      placeholder="Ejem. Lejia">
+    <span class="text-danger"
+      *ngIf="registerForm.get('nombre')?.touched && registerForm.get('nombre')?.errors?.required">
+      *Nombre obligatorio
+    </span>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <label for="descripcion" class="form-label">Descripcion</label>
+    <input type="text" name="descripcion" formControlName="descripcion" class="form-control" id="descripcion"
+      placeholder="Ejem. producto toxico">
+    <span class="text-danger"
+      *ngIf="registerForm.get('descripcion')?.touched && registerForm.get('descripcion')?.errors?.required">
+      *Descripcion campo obligatorio
+    </span>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <label for="precio" class="form-label">Precio</label>
+    <input type="number" class="form-control" name="precio" formControlName="precio" id="precio" placeholder="Ejem. 30">
+    <span class="text-danger"
+      *ngIf="registerForm.get('precio')?.touched && registerForm.get('precio')?.errors?.required">
+      *Precio obligatorio
+    </span>
+  </div>
+  <div class="col-md-6 col-sm-12 ">
+    <label for="fecha" class="form-label">Fecha</label>
+    <input type="fecha" class="form-control" name="fecha" formControlName="fecha" id="fecha"
+      placeholder="Ejem. 2021-01-01" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
+    <span class="text-danger" *ngIf="registerForm.get('fecha')?.touched && registerForm.get('fecha')?.errors?.required">
+      *Fecha obligatorio
+    </span>
+  </div>
+  <div class="col-12 col-sm-12">
+    <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Registrar producto</button>
+  </div>
+</form>
+
+
+<div class="pt-5 mt-5">
+  <div>
+    <span>Informacion sobre el formulario (background):</span>
+  </div>
+  <div>
+    {{registerForm.value | json}}
+  </div>
+</div>

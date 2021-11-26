@@ -47,7 +47,22 @@
       "id": "1",
       "nombre": "Debora",
       "descripcion": "Guardado",
-      "precio": "10"
+      "precio": "10",
+      "fecha": "2021-01-29"
+    },
+    {
+      "nombre": "Lejia",
+      "descripcion": "Es toxico",
+      "precio": 0.25,
+      "fecha": "2021-01-29",
+      "id": "WPe2tSp"
+    },
+    {
+      "nombre": "Prueba",
+      "descripcion": "Prueba",
+      "precio": 0.24,
+      "fecha": "17-11-2021",
+      "id": "eATcNnQ"
     }
   ]
 }
