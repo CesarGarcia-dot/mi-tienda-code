@@ -59,9 +59,9 @@ Se utilizo una clase "PIPE" personalizada para las alertas de meses restante en 
 
 1. Realice un sitio donde posea las opciones (botones) listar/agregar cliente, listar/agregar
 productos, realizar orden. :heavy_check_mark:
- a. Cliente: Id, Nombres, Apellidos, Teléfono, Correo, NIT.
- b. Orden: idProducto, idCliente, idOrden, Cantidad, Fecha.
- c. Producto: id, nombre, descripción, precio.
+ *a. Cliente: Id, Nombres, Apellidos, Teléfono, Correo, NIT.
+ *b. Orden: idProducto, idCliente, idOrden, Cantidad, Fecha.
+ *c. Producto: id, nombre, descripción, precio.
 2. Cree un proyecto Angular con el siguiente ruteo. :heavy_check_mark:
  Home: http://mi-tienda/
 Clientes: :heavy_check_mark:
