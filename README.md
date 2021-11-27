@@ -6,6 +6,8 @@ Creacion de un proyecto en angular simulando la conexion a una api fake
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
+![alt text](https://raw.githubusercontent.com/CesarGarcia-dot/mi-tienda-code/main/images/home.png)
+
 Mira **Deployment** para conocer como desplegar el proyecto.
 
 
