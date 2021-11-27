@@ -1,43 +1,52 @@
 <h3>Lista de ordenes</h3>
 <div class="row">
   <div class="col col-5">
-    <button type="button" class="btn btn-light">Listar ordenes</button>
-    <button type="button" class="btn btn-primary ms-5">Registrar orden</button>
+    <button type="button" (click)="combinacionArreglos()" class="btn btn-light">Listar ordenes</button>
+    <button type="button" routerLink="./agregar" class="btn btn-primary ms-5">Registrar orden</button>
   </div>
 </div>
 <div class="mb-5">
 
 </div>
-  <div class="row">
-    <div class="col col-12">
+<div class="row">
+  <div class="col col-12">
+    <div *ngIf="loading" class="d-flex align-items-center">
+      <strong>Cargando...</strong>
+      <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+    </div>
+    <div *ngIf="show">
+      <div class="card">
+        <div class="card-body">
+          Las alertas son para diferencias de meses de retraso.
+          Celeste: Baja prioridad.
+          Amarillo: Media prioridad para 1 mes.
+          Rojo: Alta prioridad, mes actual.
+          Gris: sin fecha cercana a la actual.
+        </div>
+      </div>
       <table class="table table-responsive">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Codigo de Orden (#)</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Alertas</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+          <tr *ngFor="let orden of ordenes">
+            <th scope="row">{{orden.id}}</th>
+            <td>{{orden.cliente.nombre}} {{orden.cliente.apellido}}</td>
+            <td>{{orden.producto.nombre}}</td>
+            <td>{{orden.cantidad}}</td>
+            <td>{{orden.fecha}}</td>
+            <td><button class="{{orden.fecha | ordenCaduca:'color' }}"><i class="bi bi-bell"></i></button></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
+
+</div>

@@ -35,18 +35,32 @@
   ],
   "ordenes": [
     {
+      "id": "1",
       "idProducto": "1",
       "idCliente": "1",
-      "idOrden": "1",
       "cantidad": "1",
       "fecha": "12-09-2021"
+    },
+    {
+      "idCliente": "2",
+      "idProducto": "WPe2tSp",
+      "cantidad": 2,
+      "fecha": "20-11-2021",
+      "id": "fymLnl5"
+    },
+    {
+      "idCliente": "3",
+      "idProducto": "1",
+      "cantidad": 2,
+      "fecha": "1-1-2022",
+      "id": "ZM_aZpd"
     }
   ],
   "productos": [
     {
       "id": "1",
-      "nombre": "Debora",
-      "descripcion": "Guardado",
+      "nombre": "Rinso",
+      "descripcion": "Maxisol",
       "precio": "10",
       "fecha": "2021-01-29"
     },

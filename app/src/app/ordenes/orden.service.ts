@@ -26,8 +26,8 @@ export class OrdenService {
     return this.http.get<Orden[]>(this.apiUrl);
   }
 
-  addOrder(orden: Orden) {
-    return this.ordenes.push(orden);
+  addOrden(orden: Orden) {
+    return this.http.post(this.apiUrl, orden);
   }
 
 
