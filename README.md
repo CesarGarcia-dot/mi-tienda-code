@@ -8,19 +8,45 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 ![alt text](https://raw.githubusercontent.com/CesarGarcia-dot/mi-tienda-code/main/images/home.png)
 
-Mira **Deployment** para conocer como desplegar el proyecto.
-
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Se utilizara la paqueteria NPM de Nodejs_
 
 ```
-Da un ejemplo
+Angular : ~12.0.0
+SweetAlertJS: 2.0
+Moment: +2.0
+NgBootstrap
+Bootstrap: 5
+Json-server
 ```
 
-### Instalación 🔧
+### Explicacion del proceso 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+El proyecto cuenta con registro de clientes
+![alt text](https://raw.githubusercontent.com/CesarGarcia-dot/mi-tienda-code/main/images/form-customer.png)
 
-_Dí cómo será ese paso_
+y tambien con mostrar la lista de los datos como se pidio en la prueba tecnica.
+Utilizando un servidor de api fake.
+
+
+![alt text](https://raw.githubusercontent.com/CesarGarcia-dot/mi-tienda-code/main/images/lista-clientes.png)
+
+La aplicacion web registra y lista los datos utlizando angular.
+Aplicando validaciones correspondientes.
+
+![alt text](https://raw.githubusercontent.com/CesarGarcia-dot/mi-tienda-code/main/images/validations-forms-customer.png)
+
+Lista de productos
+
+![alt text](https://raw.githubusercontent.com/CesarGarcia-dot/mi-tienda-code/main/images/products-list.png)
+
+Simula el registro de una orden, pidiendo cliente y producto para la asignacion correspondiente.
+
+![alt text](https://raw.githubusercontent.com/CesarGarcia-dot/mi-tienda-code/main/images/register-order.png)
+
+Se utilizo una clase "PIPE" personalizada para las alertas de meses restante en una simulacion de entrega de producto. La clase se llama "ordenCaduca" que requiere de un valor llamado "color" ejemplo: ordenCaduca:'color'
+
+![alt text](https://raw.githubusercontent.com/CesarGarcia-dot/mi-tienda-code/main/images/orders-list.png)
+
