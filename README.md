@@ -57,7 +57,6 @@ Se utilizo una clase "PIPE" personalizada para las alertas de meses restante en 
 
 
 
-```
 1. Realice un sitio donde posea las opciones (botones) listar/agregar cliente, listar/agregar
 productos, realizar orden.
  a. Cliente: Id, Nombres, Apellidos, Teléfono, Correo, NIT.
@@ -100,4 +99,3 @@ consola la asignacion del valor.
 12. Hacer uso de herencias entre componentes.
 13. Presentación de mensajes al usuario.
 14. Versione el proyecto utilizando git.
-```
