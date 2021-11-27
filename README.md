@@ -58,13 +58,13 @@ Se utilizo una clase "PIPE" personalizada para las alertas de meses restante en 
 
 
 1. Realice un sitio donde posea las opciones (botones) listar/agregar cliente, listar/agregar
-productos, realizar orden.
+productos, realizar orden. :heavy_check_mark:
  a. Cliente: Id, Nombres, Apellidos, Teléfono, Correo, NIT.
  b. Orden: idProducto, idCliente, idOrden, Cantidad, Fecha.
  c. Producto: id, nombre, descripción, precio.
-2. Cree un proyecto Angular con el siguiente ruteo.
+2. Cree un proyecto Angular con el siguiente ruteo. :heavy_check_mark:
  Home: http://mi-tienda/
-Clientes:
+Clientes: :heavy_check_mark:
 • http://mi-tienda/clientes/ (Mostrar tabla con los clientes obtenidos del servicio
 REST Método GET)
 • http://mi-tienda/clientes/agregar (Desde página de clientes redireccionar a
@@ -72,7 +72,7 @@ página para poder agregar un cliente al servicio REST Metodo POST)
 • http://mi-tienda/clientes/mostrar/1 (Desde página de clientes redireccionar a
 página para visualizar seleccionado el cliente, compartir información de página
 clientes utilizando servicios).
-Productos:
+Productos: :heavy_check_mark:
 • http://mi-tienda/productos/ (Mostrar tabla con los productos obtenidos del
 servicio REST Método GET)
 • http://mi-tienda/productos/agregar (Desde página de productos redireccionar a
@@ -80,22 +80,22 @@ página para poder agregar un producto al servicio REST método POST).
 • http://mi-tienda/productos/mostrar/1 (Desde página de productos redireccionar a
 página para visualizar seleccionado el producto, compartir información de página
 productos utilizando servicios).
-Ordenes:
+Ordenes: :heavy_check_mark:
 • http://mi-tienda/crear-orden (Mostrar página para registrar ordenes, todos los
 datos serán ingresados).
 • http://mi-tienda/ordenes (Mostrar ordenes registradas, REST método GET
-3. Utilizar Servicios para el manejo de la información.
-4. Crear validaciones de campos requeridos para los ID's.
+3. Utilizar Servicios para el manejo de la información. :heavy_check_mark:
+4. Crear validaciones de campos requeridos para los ID's. :heavy_check_mark:
 5. Incluir todas las validaciones necesarias en base al valor del campo (por ejemplo,
-Validar que formatos sean correctos).
-6. Hacer uso de formGroup/formArray.
+Validar que formatos sean correctos). :interrobang:
+6. Hacer uso de formGroup/formArray. :heavy_check_mark:
 7. Utilizar carga a demanda de componentes a partir de plantillas, no hacer uso
-“routing.module".
+“routing.module". :interrobang: (lazy loading?)
 8. Sobreescribir comportamiento de asignacion de valores en formControl y mostrar en
-consola la asignacion del valor.
-9. Hacer uso de implementación de cadenas de formularios y grupos de formularios.
-10. Hacer uso de implementación de un escenario utilizando PIPE (Personalizado).
+consola la asignacion del valor. :heavy_check_mark:
+9. Hacer uso de implementación de cadenas de formularios y grupos de formularios. :heavy_check_mark:
+10. Hacer uso de implementación de un escenario utilizando PIPE (Personalizado). :heavy_check_mark:
 11. Hacer uso de implementación de un escenario utilizando DIRECTIVAS (Personalizado). :x:
-12. Hacer uso de herencias entre componentes.
-13. Presentación de mensajes al usuario.
-14. Versione el proyecto utilizando git.
+12. Hacer uso de herencias entre componentes. :heavy_check_mark:
+13. Presentación de mensajes al usuario. :heavy_check_mark:
+14. Versione el proyecto utilizando git. :heavy_check_mark:
